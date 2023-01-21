@@ -1,0 +1,9 @@
+FROM python:2.7-alpine
+WORKDIR /usr/src/app
+COPY ./app.py .
+COPY ./style.css ./static/
+COPY ./form_action.html ./templates/
+COPY ./form_submit.html ./templates/
+RUN pip install requests flask pymongo
+EXPOSE 5000
+CMD [ "python", "./app.py" ]

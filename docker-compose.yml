@@ -1,19 +1,3 @@
-# LIN2-TP2-Docker
-
-#### Setup
-
-##### Modification code app.py
-
-`import os`
-
-`client = MongoClient(db, 27017)`
-
-##### Docker Compose 
-
-```docker
-#Final
-# docker-compose up -d
-
 version: '3'
 networks:
   net:
@@ -43,12 +27,3 @@ services:
     networks:
       net:
         ipv4_address: 10.10.10.11
-```
-
-##### Image
-
-`docker image tag 3746 auggus/tpdockerv2:v0.3`
-
-`docker push auggus/tpdockerv2:v0.2`
-
-Link : https://hub.docker.com/repository/docker/auggus/tpdockerv2/general
